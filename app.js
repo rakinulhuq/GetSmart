@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const superagent = require('superagent')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,15 +26,8 @@ app.use('/users', usersRouter);
 
 app.use(bodyParser.json());
 
-let foo = function() {
-    process.stdout.write("hello: ");
-}
-
-app.post('/', function(req, res) {
-    console.log(req.body);
-    res.send(200);
-
-    foo();
+app.get('/getSmart/', function(req, res) {
+    res.send("RAKINUL HUQ");
 });
 
 // catch 404 and forward to error handler

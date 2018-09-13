@@ -39,7 +39,6 @@
   <script src="https://apis.google.com/js/client.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-  <script src="utils.js"></script>
 
 
 
@@ -179,6 +178,28 @@
 <!-- Bootstrap core JavaScript -->
 <script src="/jquery/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    function callbackFunc(response){
+        console.log("response received")
+        console.log(response);
+    }
+
+    var generateButton = document.getElementById("search");
+
+
+    generateButton.onclick = function(){
+
+
+        $.ajax({
+            type: "GET",
+            url: "http://127.0.0.1:3000/getSmart/",
+            success: callbackFunc
+        });
+    }
+
+</script>
 
 </body>
 
