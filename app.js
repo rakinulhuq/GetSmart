@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const superagent = require('superagent')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
